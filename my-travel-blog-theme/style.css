@@ -1,0 +1,299 @@
+/*
+Theme Name: My Travel Blog Theme
+Theme URI: http://example.com
+Author: Your Name
+Author URI: http://example.com
+Description: A custom theme created from VSCode HTML and CSS.
+Version: 1.0
+*/
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Noto Sans JP', sans-serif;
+}
+html{
+    font-size: 100%;
+    color: #333333;
+}
+
+/* header */
+header h1{
+    margin: 5px auto 5px 10%;
+}
+header nav{
+    background: #333333;
+    text-decoration: none;
+    display: flex;
+}
+header nav p{
+    margin: 10px 0 10px 5%;
+}
+header nav p:first-child{
+    margin-left: 10%;
+}
+header nav a{
+    text-decoration: none;
+    color: #fff;
+}
+
+.readmore{
+    display: block;
+    text-decoration: underline;
+    text-align: center;
+    font-size: 0.7rem;
+    margin-top: 20px;
+    color: #333333;
+}
+
+/* threephotos */
+#threephotos{
+    margin: 25px 10%;
+    display: flex;
+    justify-content: space-between;
+}
+.main-article{
+    width: 30%
+}
+.main-article .photo-size{
+    height: 160px;
+}
+.main-article .photo-size img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.main-article p{
+    margin-top: 5px;
+    font-size: 0.8rem;
+    font-weight: 600;
+}
+
+/* #both-sides */
+#both-sides{
+    display: grid;
+    grid-template-columns: 65% 30%;
+    column-gap: 5%;
+    margin: 0 10%;
+    margin-bottom: 110px;
+}
+
+/* left-side */
+#left-side .left-article{
+    margin-bottom: 50px;
+}
+#left-side .lefttitle{
+    font-weight: 600;
+}
+#left-side .date{
+    display: flex;
+    font-size: 0.8rem;
+    margin-top: 10px;
+    margin-bottom: 5px;
+}
+#left-side .left-article .date p:nth-child(2){
+    margin-left: 10px;
+}
+#left-side .left-article .leftphoto img{
+    width: 100%;
+    height: 100%;
+}
+#left-side .left-article .left-description{
+    margin: 0 5%;
+    font-size: 0.8rem;
+}
+
+/* right-side */
+#right-side .profile{
+    margin-bottom: 30px;
+}
+#right-side .author{
+    width: 50%;
+    /* height: 120px; */
+    border-radius: 100%;
+    margin: 0 auto;
+}
+#right-side .author img{
+    width: 100%;
+    height: 100%;
+}
+#right-side .name{
+    margin: 10px 0;
+    text-align: center;
+    font-weight: 600;
+}
+#right-side .self-introduction{
+    font-size: 0.6rem;
+}
+.right-title{
+    text-align: center;
+    font-weight: 600;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+/* Ranking */
+.ranking article p{
+    font-size: 0.6rem;
+    margin-bottom: 10px;
+}
+.rightphoto img{
+    width: 100%;
+}
+/* Archive */
+.archive > p:nth-child(n+2):nth-child(-n+16) {
+    border-top: 1px solid #333333;
+}
+.archive > p:nth-child(16){
+    border-bottom: 1px solid #333333 ;
+}
+.archive > p a{
+    display: inline-block;
+    text-decoration: none;
+    color: #333333;
+    font-size: 0.8rem;
+    margin: 15px auto 15px 20px;
+}
+
+/* back */
+#back{
+    background: #f7f7f7;
+}
+/* footer1 */
+.footer1{
+    padding: 30px 0;
+    margin: 0 10%;
+    display: grid;
+    grid-template-columns: repeat(3, calc(95%/3));
+    column-gap: 2.5%;
+}
+.footer1 h2{
+    font-size: 0.9rem;
+    margin-bottom: 20px;
+}
+.footer1 .about .text{
+    font-size: 0.6rem;
+    margin-bottom: 10px;
+}
+.footer1 .about p a{
+    text-decoration: none;
+    font-size: 0.6rem;
+    color: #333333;
+}
+.footer1 .menu p{
+    border-top: 1px solid #333333;
+}
+.footer1 .menu p:last-child{
+    border-bottom: 1px solid #333333;
+}
+.footer1 .menu p a{
+    display: inline-block;
+    text-decoration: none;
+    font-size: 0.6rem;
+    color: #333333;
+    margin: 10px 0;
+    margin-left: 10px;
+}
+.footer1 .twitter .tweetarea{
+    background: #dedede;
+    height: 100%;
+    position: relative;
+}
+.footer1 .twitter .tweetarea p{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 100%;
+    transform: translateX(-50%);
+    text-align: center;
+    font-size: 0.9rem;
+}
+.footer2{
+    margin: 60px 0 10px 0;
+    text-align: center;
+}
+
+/* smartphone ver */
+@media screen and (max-width:600px){
+    header h1{
+        font-size: 1.8rem;
+        margin: 5px auto 5px 5%;
+    }
+    header nav p{
+        margin: 10px 0 10px 5%;
+    }
+    header nav p:first-child{
+        margin-left: 5%;
+    }
+    header nav a{
+        text-decoration: none;
+        color: #fff;
+        font-size: 0.8rem;
+    }
+
+    /* #threephotos */
+    #threephotos{
+        margin: 25px 5%;
+        flex-direction: column;
+    }
+    .main-article{
+        width: 100%;
+        margin-bottom: 20px;
+    }
+
+    /* #both-sides */
+    #both-sides{
+        display: flex;
+        flex-direction: column;
+        margin: 0 5%;
+        margin-bottom: 110px;
+    }
+    /* left-side */
+    #left-side .left-article{
+        margin-bottom: 70px;
+    }
+    #left-side .date{
+        margin-bottom: 10px;
+    }
+    #left-side .left-article .date p:nth-child(2){
+        margin-left: 20px;
+    }
+    #left-side .left-article .left-description{
+        margin: 0 10%;
+    }
+    /* right-side */
+    .right-title{
+        margin-top: 40px;
+        margin-bottom: 30px;
+    }
+    #right-side .self-introduction{
+        font-size: 0.7rem;
+    }
+    .ranking article p{
+        font-size: 0.8rem;
+        margin-bottom: 20px;
+    }
+
+    /* #back */
+    .footer1{
+        display: flex;
+        flex-direction: column;
+        margin: 0 5%;
+    }
+    .footer1 .about{
+        margin-bottom: 50px;
+    }
+    .footer1 .about .text{
+        font-size: 0.7rem;
+        margin-bottom: 5px;
+    }
+    .footer1 .menu{
+        margin-bottom: 30px;
+    }
+    .footer1 .twitter .tweetarea{
+        width: 100%;
+        height: 280px;
+    }
+
+}
